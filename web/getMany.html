@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>使用ajax以JSON方式获取数据</title>
+	<script type="text/javascript" src="jquery.min.js"></script>
+</head>
+<body>
+	<input type="button" value="通过ajax获取多个Hero对象" id="sender">
+	<div id=messageDiv></div>
+	
+	<script>
+		$("#sender").click(function(){
+			var url="getMany";
+			$.post(
+					url,
+					function(data){
+						var heros=JSON.parse(data)
+						for(i in heros){
+							var old=$("#messageDiv").html();
+							var hero=heros[i]
+							$("#messageDiv").html(old+"<br>"+hero.name+"   ------   "+hero.hp)	
+						}						
+					}
+			)
+		})
+	</script>
+</body>
+</html>

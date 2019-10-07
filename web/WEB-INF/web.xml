@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+	<servlet>
+		<servlet-name>Hello</servlet-name>
+		<servlet-class>HelloServlet</servlet-class>
+		<load-on-startup>10</load-on-startup>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>Hello</servlet-name>
+		<url-pattern>/hello</url-pattern>
+	</servlet-mapping>	
+	
+	<servlet>
+		<servlet-name>Login</servlet-name>
+		<servlet-class>LoginServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>Login</servlet-name>
+		<url-pattern>/login</url-pattern>
+	</servlet-mapping>	
+	
+	<servlet>
+		<servlet-name>Register</servlet-name>
+		<servlet-class>RegisterServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>Register</servlet-name>
+		<url-pattern>/register</url-pattern>
+	</servlet-mapping>	
+	
+	<servlet>
+		<servlet-name>UploadPhoto</servlet-name>
+		<servlet-class>UploadPhotoServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>UploadPhoto</servlet-name>
+		<url-pattern>/uploadPhoto</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>HeroList</servlet-name>
+		<servlet-class>servlet.HeroListServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>HeroList</servlet-name>
+		<url-pattern>/listHero</url-pattern>
+	</servlet-mapping>	
+	
+	<servlet>
+		<servlet-name>HeroAdd</servlet-name>
+		<servlet-class>servlet.HeroAddServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>HeroAdd</servlet-name>
+		<url-pattern>/addHero</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>HeroDelete</servlet-name>
+		<servlet-class>servlet.HeroDeleteServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>HeroDelete</servlet-name>
+		<url-pattern>/deleteHero</url-pattern>
+	</servlet-mapping>	
+	
+	<servlet>
+		<servlet-name>HeroEdit</servlet-name>
+		<servlet-class>servlet.HeroEditServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>HeroEdit</servlet-name>
+		<url-pattern>/editHero</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>HeroUpdate</servlet-name>
+		<servlet-class>servlet.HeroUpdateServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>HeroUpdate</servlet-name>
+		<url-pattern>/updateHero</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Submit</servlet-name>
+		<servlet-class>SubmitServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>Submit</servlet-name>
+		<url-pattern>/submitServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>GetOne</servlet-name>
+		<servlet-class>GetOneServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>GetOne</servlet-name>
+		<url-pattern>/getOne</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>GetMany</servlet-name>
+		<servlet-class>GetManyServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>GetMany</servlet-name>
+		<url-pattern>/getMany</url-pattern>
+	</servlet-mapping>
+	
+	<filter>
+		<filter-name>FirstFilter</filter-name>
+		<filter-class>filter.FirstFilter</filter-class>
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>FirstFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>EncodingFilter</filter-name>
+		<filter-class>filter.EncodingFilter</filter-class>
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>EncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>AuthFilter</filter-name>
+		<filter-class>filter.AuthFilter</filter-class>
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>AuthFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<listener>
+		<listener-class>listener.ContextListener</listener-class>
+	</listener>
+	
+	<listener>
+		<listener-class>listener.ContextAttributeListener</listener-class>
+	</listener>
+	
+	<listener>
+		<listener-class>listener.SessionListener</listener-class>
+	</listener>
+	<listener>
+   	 <listener-class>listener.SessionAttributeListener</listener-class>
+	</listener> 
+
+	<listener>
+ 	   <listener-class>listener.RequestListener</listener-class>
+	</listener> 
+	
+	<listener>
+		<listener-class>listener.OnlineNumberListener</listener-class>
+	</listener>
+</web-app>
